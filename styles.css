@@ -1,4 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 html {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Courier New', monospace; */
+    font-family: "Audiowide", sans-serif;
+    box-sizing: border-box;
     background-color: black;
     color: white;
-  }
+}
+li {
+    list-style: none;
+}
+
+#header {
+    width: 100%;
+    height: 10vh;
+}
+
+#logo {
+    /* font-family: "Audiowide", sans-serif; */
+    font-size: 40px;
+    margin: 0;
+}
+
+.container {
+    padding: 0px 2%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    /* list-style: none; */
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: rgb(0, 251, 255);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 14%;
+    font-size: 20px;
+    position: relative;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-text h1 {
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    align-self: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.header-text h1::after {
+    content: "";
+    position: absolute;
+    margin-right: 50%;
+    background: black;
+    
+}
+
+#hello::after {
+    right: -107px;
+    width: 173.41px;
+    height: 31px;
+    animation: type 0.6s steps(10) forwards;
+}
+
+#name::after {
+    right: -425px;
+    width: 814.84px;
+    height: 76.5px;
+    animation: type 1.5s steps(22) forwards;
+    animation-delay: 0.6s;
+}
+
+#role::after {
+    right: -280px;
+    width: 520.24px;
+    height: 46px;
+    animation: type 1s steps(15) forwards, flash 0.9s infinite;
+    animation-delay: 2.1s;
+}
+@keyframes type {
+    0% {
+        border-left: 2px solid white;
+    }
+    99.9%{
+        width: 0;
+        border-left: 2px solid white;
+    }
+    100% {
+        width: 0;
+        border-left:0px
+    }
+}
+
+@keyframes flash {
+    0%, 100% {
+        border-left: 2px solid white;
+    }
+    50% {
+        border-left:0px
+    }
+}
+
+#hello {
+    font-size: 24px;
+}
+
+#name {
+    font-size: 60px;
+}
+
+#role {
+    font-size: 36px;
+}
